@@ -1,3 +1,3 @@
-module gitlab.com/mhersson/hello
+module github.com/mhersson/hello
 
-go 1.13
+go 1.16

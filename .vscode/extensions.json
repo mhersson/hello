@@ -2,6 +2,7 @@
   "recommendations": [
     "golang.go",
     "vscodevim.vim",
-    "kahole.magit"
+    "kahole.magit",
+    "redhat.fabric8-analytics"
   ]
 }

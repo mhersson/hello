@@ -2,7 +2,7 @@ schemaVersion: 2.1.0
 metadata:
   name: hello
 components:
-  - name: tools
+  - name: app
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.4
       memoryLimit: 2Gi
@@ -14,20 +14,20 @@ components:
           value: /tmp/.cache
       endpoints:
         - exposure: public
-          name: 'hello-endpoint'
+          name: 'app-endpoint'
           protocol: http
           targetPort: 8080
 commands:
   - id: build
     exec:
-      component: tools
+      component: app
       workingDir: ${PROJECTS_ROOT}/hello
       commandLine: go build
       group:
         kind: build
   - id: run
     exec:
-      component: tools
+      component: app
       workingDir: ${PROJECTS_ROOT}/hello
       commandLine: ./hello
       group:

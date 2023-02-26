@@ -9,7 +9,7 @@ components:
       memoryRequest: 2Gi
       cpuLimit: 1000m
       cpuRequest: 1000m
-      mountSources: false
+      mountSources: true
       env:
         - name: GOCACHE
           # replicate the GOCACHE from the plugin, even though the cache is not shared

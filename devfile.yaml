@@ -6,6 +6,8 @@ components:
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.4
       memoryLimit: 2Gi
+      memoryRequest: 2Gi
+      cpuRequest: 1000m
       mountSources: true
       env:
         - name: GOCACHE

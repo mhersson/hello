@@ -12,8 +12,6 @@ components:
       mountSources: true
       env:
         - name: GOCACHE
-          # replicate the GOCACHE from the plugin, even though the cache is not shared
-          # between the two
           value: /tmp/.cache
       endpoints:
         - exposure: public
